@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <title>PIZZA INN</title>
+  </head>
+  <body>
+    <div class="home-overlay">
+    <div class="container">
+      <div class="raw">
+        <div class="col.md.12">
+          <img src="image/pizza.jpg"height="620px"length="520px" alt="img">
+          <div class="centered">
+            <header>
+              <div class="wrapper">
+                <div class="logo">
+                  <img src="mage/11358069-pizza.jpg"height="200px" alt="">
+                  </div>
+                  <ul class="nav-area">
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">services</a></li>
+                    <li><a href="#">contacts</a></li>
+                    <li><a href="#">login</a></li>
+                  </ul>
+                </div>
+            </header>
+              <h>delicious<br>pizza</h>
+          <p>welcome <br> and <br>enjoy</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="type-overlay">
+    <div class="container">
+      <h style="text-align: center;">menu</h>
+       <div class="row">
+          <div class="col-md-4">
+              <img src="image/personal-size-pepperoni-pizza-R2TC83.jpg"height="250px" alt="image"><br>
+               <div class="regular">
+              <h>regular</h>
+               <p div class="hideMe1">this is a 3 pieces pizza and it costs sh.300 </p>
+            </div>
+           </div>
+           <div class="col-md-4">
+        <div class="medium">
+              <img src="image/large.jpg"height="250px" alt="image"><br>
+              <h>medium</h>
+                   <p class="hideMe2">the pizza has 8 pieces and it costs sh.600</p>
+             </div>
+          </div>
+          <div class="col-md-4">
+            <div class="large">
+              <img src="image/domino-s-pizza.jpg"height="250px" alt="image"><br>
+              <h>large</h>
+                  <p class="hideMe3">this pizza has 12 pieces and it costs sh.1200 </p>
+             </div>
+        </div>
+      </div>
+  </div>
+</div>
+  </div><br>
+<div class="container-fluid order" id="make-order">
+    <div class="order-overlay">
+      <div class="controls-top text-center" id="Order-now">
+        <h2>Order Here</h2>
+      </div>
+      <h2>Order your pizza here and we will deliver it to you at your door step!</h2>
+      <div class="row">
+          <div class="col-sm-5">
+            <form action="">
+                <label for="select">Select Your Flavor</label>
+                <select class="browser-default custom-select custom-select-md mb-3 name">
+                  <!-- <option selected value="choose">Choose your flavor</option> -->
+                  <option value="Chicken Tikka">Chicken Tikka</option>
+                  <option value="PeriPeri Pizza">PeriPeri Pizza</option>
+                  <option value="Raspberry Dessert Pizza">Raspberry Dessert Pizza</option>
+                  <option value="Chicken Alfredo Pizza">Chicken Alfredo Pizza</option>
+                  <option value="Sunchoke Pizza">Sunchoke Pizza</option>
+                  <option value="Buffalo Chicken Sticks">Buffalo Chicken Sticks</option>
+                </select>
+              <label for="select">Select Size</label>
+              <select class="browser-default custom-select custom-select-md mb-3" id="size">
+                <option selected value="0">Select size here</option>
+                <option value="large">Large -- sh. 1200</option>
+                <option value="medium">Medium -- sh. 600</option>
+                <option value="small">Small -- sh. 300</option>
+              </select>
+              <label for="crust">Choose Crust!</label>
+                <select class="browser-default custom-select custom-select-md mb-3" id="crust">
+                    <option selected value="0">Select your preferred crust!</option>
+                  <option value="Crispy">Crispy -- sh. 200</option>
+                  <option value="Stuffed">Stuffed -- sh. 150</option>
+                  <option value="Gluten-free">Gluten-free-- sh. 180</option>
+                </select>
+              <label for="Toppings">Select Your Toppings at sh. 50 each</label><br>
+                <div class="custom-control custom-checkbox custom-control-inline">
+                  <input type="checkbox" class="custom-control-input" id="Sausage" value="Sausage" name="toppings">
+                  <label class="custom-control-label" for="Sausage">Sausage</label>
+                </div>
+                <div class="custom-control custom-checkbox custom-control-inline">
+                  <input type="checkbox" class="custom-control-input" id="Bacon" value="Bacon" name="toppings">
+                  <label class="custom-control-label" for="Bacon">Bacon</label>
+                </div>
+                <div class="custom-control custom-checkbox custom-control-inline">
+                  <input type="checkbox" class="custom-control-input" id="Mushrooms" value="Mushrooms" name="toppings">
+                  <label class="custom-control-label" for="Mushrooms">Mushrooms</label>
+                </div>
+                <br><br>
+              <button type="submit" class="btn btn-orange proceed">Proceed</button>
+
+            </form>
+          </div>
+          <div class="col-sm-7">
+            <div class="choise">
+              <h2>Your Order is:</h2>
+              <div id="your-orders">
+                <table class="table table-sm  pizzatable">
+                  <thead>
+                    <tr>
+                      <th scope="col">Name</th>
+                      <th scope="col">Size</th>
+                      <th scope="col">Crust</th>
+                      <th scope="col">Topping</th>
+                      <th scope="col">Total</th>
+                    </tr>
+                  </thead>
+                  <tbody id="ordersmade">
+                    <tr>
+                      <td id="pizzaname"></td>
+                      <td id="pizzasize"></td>
+                      <td id="pizzacrust"></td>
+                      <td id="pizzatopping"></td>
+                      <td id="totals"></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p id="pizzatotal"></p>
+                <p id="totalbill"></p>
+                <p id="addedprice">Delivery will cost sh. 150</p>
+                <p id="finallmessage"></p>
+              </div>
+              <button class="btn btn-orange addPizza">Add Pizza</button>
+              <button class="btn btn-orange" id="checkout">Checkout</button>
+              <button class="btn btn-orange deliver">Home delivery?</button>
+            </div>
+            <div class="delivery">
+                <form action="">
+                  <div class="form-group">
+                    <input type="text" id="name" class="form-control mb-3" placeholder="Name">
+                    <input type="number" id="phone" class="form-control mb-3" placeholder="Pnone Number">
+                    <input type="text" id="location" class="form-control mb-3" placeholder="Location for delivery">
+                    <button class="btn btn-orange" id="final-order">Place Order</button>
+                  </div>
+                </form>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="contacts">
+    <div class="contact-overlay">
+  <div class="contact-section">
+    <h class="text-center contact text-white"contact us</h>
+    <p>CONTACT US</p>
+    <p>Send Us A Message</p>
+    <p>Email:pizzpizza@gmail.com</p>
+    <p>Call us =254712345678</p>
+    <form class="contact-form" action="index.html" method="post"
+    <input type="text"class="contact-form-text"placeholder="your name">
+    <input type="text"class="contact-form-text"placeholder="your email">
+    <input type="text"class="contact-form-text"placeholder="your phone">
+    <textarea class="contact-form-text"placeholder="your message"></textarea>
+      <input type="submit" class="contact-form-btn" value="send">
+  </div>
+</div>
+</div>
+
+</body>
+
+   <script src="js/scripts.js"</scripts>
+     <script src="js/jquery-1.12.0.js"></script>
+</html>

@@ -1,0 +1,142 @@
+body{
+  margin: 0px;
+  padding:0px;
+  font-family: sans-serif;
+  background: #343a40;
+}
+.wrapper{
+  width: 1770px;
+  margin: auto;
+}
+.nav-area{
+  float: right;
+  list-style: none;
+  margin-top: 30px;
+}
+.nav-area li{
+  display: inline-block;
+}
+.nav-area li a{
+  color: #fff;
+  text-decoration: none;
+  padding:5px 200px;
+  font-family: poppins;
+  font-size: 14px
+}
+.nav-area li a:hover{
+  background: #fff;
+  color:#333;
+}
+.logo img{
+  width:100px;
+  float:left;
+  height: auto;
+}
+
+.container {
+ position: relative;
+ text-align: center;
+ color:black;
+ text size:medium;
+}
+.bottom-left {
+ position: absolute;
+ bottom: 8px;
+ left: 16px;
+}
+
+.top-left {
+ position: absolute;
+ top: 8px;
+ left: 16px;
+}
+
+.top-centered {
+ position: absolute;
+ top: 8px;
+ right: 16px;
+}
+.bottom-centered {
+ position: absolute;
+ bottom: 8px;
+ right: 16px;
+ font-size: small;
+}
+
+.centered {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ font-size: 50px;
+ font-style:italic;
+}
+.contact-section h{
+  text align: center;
+  color: #ddd;
+}
+.border{
+  width: 100px;
+  height:10px;
+  background: #34495e;
+  margin: 40px auto;
+}
+.contact-form{
+  max-width: 600px;
+  margin:auto;
+  padding: 0 10px;
+  overflow:hidden;
+}
+.contact-form-text{
+  display:block;
+  width:100%
+  box-sizing:border-box;
+  margin: 16px 0;
+  border:0;
+  background: #111;
+  padding:20px 40px
+  color: #ddd;
+  transition:0.5;
+}
+.contact-form-text:focus{
+  box-shadow:0 0 10px 4px #34495e
+}
+textarea.contact-form-text{
+  resize: none;
+  height: 120px;
+}
+.contact-form-btn{
+  float: right;
+  border:0;
+  background: #34495e;
+  color:#fff;
+  padding: 12px 50px;
+  cursor:pointer;
+  transition: 0.5s
+}
+.contact-form-btn:hover{
+  background: #2980b9;
+}
+.contact-overlay {
+    height: inherit;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.order-overlay {
+    height: inherit;
+    background-color: rgba(0,0,0,10);
+}
+.type-overlay {
+    height: inherit;
+    background-color: rgba(255,0,0,0.4);
+}
+.home-overlay {
+    height: inherit;
+    background-color: rgba(0,0,0,7);
+}
+  position: relative;
+  text align: center;
+  font-size: small;
+  }
+  .menu image:hover{
+    cursor: pointer,
+}
