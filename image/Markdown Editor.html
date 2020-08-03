@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Markdown Editor</title>
+    <link rel="icon" type="image/png" href="https://jbt.github.io/markdown-editor/favicon.png">
+    <link rel="stylesheet" href="Markdown%20Editor_files/material-icons.css">
+    <link rel="stylesheet" href="Markdown%20Editor_files/base16-light.css">
+    <link rel="stylesheet" href="Markdown%20Editor_files/codemirror.css">
+    <link rel="stylesheet" href="Markdown%20Editor_files/default.css">
+    <link rel="stylesheet" href="Markdown%20Editor_files/github-markdown.css">
+    <link rel="stylesheet" href="Markdown%20Editor_files/spell-checker.css">
+    <link rel="stylesheet" href="Markdown%20Editor_files/sweetalert.css">
+    <link rel="stylesheet" href="Markdown%20Editor_files/index.css">
+  </head>
+  <body id="toplevel">
+    <div id="in"><form><textarea id="code" style="display: none;"># New Document</textarea><div class="CodeMirror cm-s-base16-light CodeMirror-wrap"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 34px; left: 34px;"><textarea style="position: absolute; padding: 0px; width: 1px; height: 1em; outline: currentcolor none medium;" autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" wrap="off"></textarea></div><div class="CodeMirror-vscrollbar" cm-not-content="true"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1" draggable="true"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: -12px; border-right-width: 18px; min-height: 24px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines"><div style="position: relative; outline: currentcolor none medium;"><div class="CodeMirror-measure"><pre>x</pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors" style=""><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 16px;">&nbsp;</div></div><div class="CodeMirror-code"><pre><span><span cm-text="">​</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 18px; width: 1px; top: 24px;"></div><div class="CodeMirror-gutters" style="display: none; height: 578px;"></div></div></div></form></div>
+    <div id="out" class="markdown-body"></div>
+    <div id="menu" style="display: block;">
+      <span>Save As</span>
+      <div id="saveas-markdown">
+        <svg height="64" width="64" xmlns="http://www.w3.org/2000/svg">
+          <g transform="scale(0.0625)">
+            <path d="M950.154 192H73.846C33.127 192 0 225.12699999999995 0 265.846v492.308C0 798.875 33.127 832 73.846 832h876.308c40.721 0 73.846-33.125 73.846-73.846V265.846C1024 225.12699999999995 990.875 192 950.154 192zM576 703.875L448 704V512l-96 123.077L256 512v192H128V320h128l96 128 96-128 128-0.125V703.875zM767.091 735.875L608 512h96V320h128v192h96L767.091 735.875z"></path>
+          </g>
+        </svg>
+        <span>Markdown</span>
+      </div>
+      <div id="saveas-html">
+        <svg height="64" width="64" xmlns="http://www.w3.org/2000/svg">
+          <g transform="scale(0.0625) translate(64,0)">
+            <path d="M608 192l-96 96 224 224L512 736l96 96 288-320L608 192zM288 192L0 512l288 320 96-96L160 512l224-224L288 192z"></path>
+          </g>
+        </svg>
+        <span>HTML</span>
+      </div>
+      <a id="close-menu">×</a>
+    </div>
+    <div id="navbar">
+      <div id="navcontent">
+        <a id="logo" href="https://github.com/jbt/markdown-editor" tooltip="Check out the code on Github!">
+          <p id="title" class="left"># Markdown Editor</p>
+        </a>
+        <p id="openbutton" title="Open from Disk" class="navbutton left" onclick="document.getElementById('fileInput').click();"><i class="material-icons">open_in_browser</i></p>
+        <input id="fileInput" type="file" class="hidden" accept=".md,.mdown,.txt,.markdown">
+        <p id="savebutton" title="Download" class="navbutton left" onclick="showMenu()"><i class="material-icons">file_download</i></p>
+        <p id="browsersavebutton" title="Browser Save (Experimental)" class="navbutton left" onclick="saveInBrowser()"><i class="material-icons">save</i></p>
+        <p id="sharebutton" title="Generate Shareable Link" class="navbutton left" onclick="updateHash()"><i class="material-icons">share</i></p>
+        <p id="nightbutton" title="Night Mode" class="navbutton left" onclick="toggleNightMode(this)"><i class="material-icons">invert_colors</i></p>
+        <p id="readbutton" title="Reading Mode" class="navbutton left" onclick="toggleReadMode(this)"><i class="material-icons">chrome_reader_mode</i></p>
+        <p id="spellbutton" title="Spell Check" class="navbutton left selected" onclick="toggleSpellCheck(this)"><i class="material-icons">spellcheck</i></p>
+        <p id="newbutton" class="navbutton left hidden" onclick="clearEditor()">Clear</p>
+        <p id="sharebutton" class="navbutton left selected hidden">Share</p>
+      </div>
+    </div>
+    <script async="" src="Markdown%20Editor_files/analytics.js"></script><script src="Markdown%20Editor_files/markdown-it.js"></script>
+    <script src="Markdown%20Editor_files/markdown-it-footnote.js"></script>
+    <script src="Markdown%20Editor_files/highlight.js"></script>
+    <script src="Markdown%20Editor_files/emojify.js"></script>
+    <script src="Markdown%20Editor_files/codemirror.js"></script>
+    <script src="Markdown%20Editor_files/overlay.js"></script>
+    <script src="Markdown%20Editor_files/xml.js"></script>
+    <script src="Markdown%20Editor_files/markdown.js"></script>
+    <script src="Markdown%20Editor_files/gfm.js"></script>
+    <script src="Markdown%20Editor_files/javascript.js"></script>
+    <script src="Markdown%20Editor_files/css.js"></script>
+    <script src="Markdown%20Editor_files/htmlmixed.js"></script>
+    <script src="Markdown%20Editor_files/continuelist.js"></script>
+    <script src="Markdown%20Editor_files/spell-checker.js"></script>
+    <script src="Markdown%20Editor_files/rawinflate.js"></script>
+    <script src="Markdown%20Editor_files/rawdeflate.js"></script>
+    <script src="Markdown%20Editor_files/sweetalert.js"></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-92976741-1', 'auto');
+  ga('send', 'pageview');
+
+    </script>
+    <script src="Markdown%20Editor_files/index.js"></script>
+  
+
+</body></html>

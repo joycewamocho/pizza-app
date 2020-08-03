@@ -19,7 +19,5 @@ bootstrap
 #### contact details
 phone number:0797737857
 Email:joywamo@gmail.com
-###live link
-file:///home/wamocho/wk3Ip/index.html
 #### License
 MIT License 
