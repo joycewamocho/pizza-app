@@ -1,4 +1,4 @@
-#project name
+# project name
 pizza inn
 ## Project description:
 web application for ordering pizza
@@ -14,10 +14,10 @@ css
 javascript
 jquery
 bootstrap
-##live link
-[demo](file:///home/wamocho/wk4Ip/index.html)
+## live link
+[demo](https://joycewamocho.github.io/pizza-app/.)
 #### contact details
 phone number:0797737857
 Email:joywamo@gmail.com
 #### License
-MIT License 
+MIT License
